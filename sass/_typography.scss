@@ -1,0 +1,141 @@
+// General Font Stuff
+h1, h2, h3, h4, h5, h6, p {
+	margin-bottom: 0em;
+}
+/*label.body-text {
+	font-size: 0.8em;
+}*/
+span.smaller {
+	font-size: 0.7em;
+	line-height: 0.7em;
+}
+a {
+	text-decoration: none;
+	color: $dark-purple;
+}
+a:hover{
+	text-decoration: underline;
+}
+h1 a {
+	color: $dark-gray;
+}
+h1 a:hover {
+	text-decoration: none;
+	color: $light-gray;
+}
+::selection {
+	background: $light-purple;
+}
+::-moz-selection {
+	background: $light-purple;
+}
+#searchbox_chzn {
+	font-family: $proxima;
+    font-size: 100%;
+}
+#searchbox_chzn input {
+    height: 100%;
+}
+
+.leaflet-container {
+	font-family: $proxima !important;
+}
+
+// Paragraph Styles
+.intro {
+	@media (max-width: $desk-start) {
+		text-align: center;
+		margin: 2% auto;
+	}
+}
+.body-text {
+	font-family: $meta;
+	font-size: 1.0em;
+	a {
+		text-decoration: underline;
+	}
+}
+.number {
+	font-size: 1.1em;
+	font-family: $proxima;
+	font-weight: bold;
+	color: $dark-gray;
+}
+.quote {
+	font-size: 1.1em;
+}
+.quote-attr {
+	font-family: $proxima;
+	font-size: 0.85em;
+	color: $light-gray;
+}
+
+// Heading Styles
+h1 { // "The Housing Guide"
+	font-family: $proxima;
+	color: $dark-gray;
+	font-size: 3.25em;
+	line-height: 1em;
+	text-transform: uppercase;
+	margin-bottom: 0.2em;
+	@media (max-width: $desk-start) {
+		text-align: center;
+		font-size: 2.75em;
+	}
+	@media (max-width: $lap-start) {
+		font-size: 2.25em;
+	}
+}
+h2 { // Header for each dorm detail page, e.g. "Hobart House"
+	font-family: $meta;
+	font-weight: bold;
+	color: $dark-gray;
+}
+h3 {
+	font-family: $proxima;
+	color: $dark-gray;
+	font-size: 1em;
+	font-weight: normal;
+	text-transform: uppercase;
+	font-weight: bold;
+}
+h4, .delta { // Actions, e.g. "Filter," "Search," "Explore"
+	font-family: $proxima;
+	text-transform: uppercase;
+	color: $dark-purple;
+	font-weight: lighter;
+	font-size: 0.8em;
+}
+h5, span.epsilon { // Details on actions, e.g. "by dorm name," "or read more"
+	font-family: $proxima;
+	color: $light-gray;
+	font-weight: normal;
+	text-transform: lowercase;
+	font-size: 0.8rem;
+}
+.teaser h2 { // Headlines on related stories and filter explanations
+	font-size: 1.2em;
+	color: $dark-purple;
+	text-decoration: underline;
+}
+.filter-exp h2 {
+	font-size: 1.2em;
+}
+.credit {
+	color: #fff;
+	margin-bottom: 0.5em;
+}
+p.credit {
+	font-family: $proxima;
+	font-weight: light;
+	font-size: 0.8em;
+}
+
+#sponsored-container {
+	p {
+		a {
+			color: white;
+			text-decoration: underline;
+		}
+	}
+}

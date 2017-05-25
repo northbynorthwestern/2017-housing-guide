@@ -1,0 +1,449 @@
+// General
+.clear {clear: both;}
+.float-left {float: left;}
+.float-right {float: right;}
+.no-padding {padding: 0em;}
+.padding-top {padding-top: 24px;}
+.padding-left {padding-left: 24px;}
+.padded {padding: 24px;}
+.border-bottom {border-bottom: 1px solid $light-purple;}
+.background-purple {background-color: $dark-purple;}
+.display-desktop {
+	@media (max-width: $desk-start) {
+		display: none;
+	}
+}
+.hidden-desktop {
+	@media (min-width: $desk-start) {
+		display: none;
+	}
+}
+@mixin padded-grid-item {
+	@media (max-width: $lap-start) {
+		padding-left: 48px;
+	}
+}
+
+// NBN Logo & Purple Bar
+#bar {
+	height: 40px;
+	img {
+		width: 30px;
+		padding-top: 5px;
+		margin-left: 5px;
+		@media (max-width: $desk-start) {
+			display: block;
+			margin-right: auto;
+			margin-left: auto;
+		}
+	}
+}
+
+// Headline, Intro, Search
+#header {
+	position: relative;
+	color: $dark-gray;
+	border-bottom: 1px solid $light-purple;
+	padding: 18px 24px;
+}
+#search-container {
+	position: relative;
+	@media (max-width: $desk-start) {
+		width: 50%;
+		margin: 0 25%;
+	}
+	@media (min-width: $desk-start) {
+		position: absolute;
+		right: 24px;
+		bottom: 24px;
+	}
+}
+#searchbox {
+	width: 100%!important;
+    @media (min-width: $desk-start) {
+    	max-width: 300px!important;
+    }
+}
+.chzn-default span {
+	font-family: $proxima;
+	text-transform: uppercase;
+	color: $dark-purple;
+	font-weight: lighter;
+	font-size: 0.8em;
+}
+
+// Filter
+#filter-container {
+	padding-left: 48px;
+	@media (max-width: $desk-start) {
+		border-bottom: 1px solid $light-purple;
+	}
+	ul {
+		margin: 0.5em 0em 0em 0em;
+		-webkit-touch-callout: none;
+		-webkit-user-select: none;
+		-khtml-user-select: none;
+		-moz-user-select: none;
+		-ms-user-select: none;
+		user-select: none;
+		li {
+			list-style-type: none;
+			line-height: 120%;
+			label {
+				display: inline;
+				font-family: $proxima;
+			}
+			@media (max-width: $desk-start) {
+				margin-left: 0.5em;
+			}
+		}
+		@media (min-width: $lap-start) and (max-width: $desk-start) {
+			display: inline;
+		}
+		input {
+			font-size: 100%;
+		}
+	}
+}
+#clear-filter-button {
+	background: $light-purple;
+	margin-top: 16px;
+	width: 6.2em;
+	padding: 0.3em 1em;
+}
+
+// Explore section of page. Contains map and table.
+#explore-container {
+	@media (min-width: $desk-start) {
+		border-left: 1px solid $light-purple;
+	}
+}
+
+// Map
+#map-container {
+	@media (max-width: $desk-start) {
+		padding-left: 48px;
+	}
+}
+#map {
+	height: 600px;
+	margin-top: 16px;
+	@media (max-width: $lap-start) {
+		display: none;
+	}
+}
+
+.leaflet-popup-content-wrapper {
+	border-radius: 5px !important;
+	-webkit-border-radius: 5px !important;
+}
+
+// Table
+#table-container {
+	padding-right: 24px;
+	@include padded-grid-item;
+}
+table {
+	font-family: $proxima;
+	@media (min-width: $lap-start) {
+		margin-top: 31px;
+	}
+	tr {
+		padding-left: 24px;
+		border-bottom: 1px solid $light-purple;
+	}
+	thead tr {
+		background-color: $light-purple;
+		height: 2em;
+		font-weight: bold;
+		border-bottom: 1px solid $dark-purple;
+	}
+	thead tr td:first-child {
+		padding-left: 3%;
+	}
+	tbody tr td:first-child {
+		padding-left: 3%;
+	}
+}
+td {
+	padding: 0% 1.5% 0% 0%;
+}
+.dot {
+	display: block;
+	float: left;
+	width: 8px;
+	height: 8px;
+	border-radius: 8px;
+	margin: 7px 7px 0px 0px;
+}
+.perfect-fit > .dot,
+.dot.perfect-fit {
+	background-color: $green;
+}
+.good-fit > .dot,
+.dot.good-fit{
+	background-color: $yellow;
+}
+.bad-fit > .dot,
+.dot.bad-fit{
+	background-color: $red;
+}
+.clear-filter {
+    cursor: pointer;
+}
+#legend-container {
+	border: 1px solid $light-purple;
+	overflow: auto;
+	margin-bottom: 24px;
+	p {
+		margin-right: 4%;
+		font-family: $proxima;
+	}
+	p:last-child {
+		margin-right: 0%;
+	}
+}
+#legend {
+	width: 17.5em;
+	overflow-x: auto;
+	overflow-y: hidden;
+	margin: 0 auto;
+}
+
+// Teasers
+#teaser-container {
+	padding-left: 24px;
+}
+.teaser {
+	@media (max-width: $lap-start) {
+		margin-top: 24px;
+	}
+}
+.teaser:first-child {
+	@media (max-width: $lap-start) {
+		margin-top: 0px;
+	}
+}
+
+#sponsored-container {
+	background-color: $dark-purple;
+	color: white;
+	border-bottom: 1px solid $light-purple;
+
+	h2, h3 {
+		font-family: $proxima;
+		color: white;
+		a {
+			color: white;
+		}
+	}
+}
+
+.sponsored-intro {
+	p {
+		font-size: 1.25em;
+		font-family: $proxima;
+	}
+
+	@media (min-width: $lap-start) {
+		left: 20%;
+		position: relative;
+	}
+}
+
+.image-container {
+	img {
+		display: block;
+		margin: 0 auto;
+	}
+}
+
+.sponsored-content {
+	text-align: center;
+}
+
+.sponsored-content a {
+	color: white;
+}
+
+
+/// New Stuff for 2015
+.grid .header {
+  @media (min-width: 620px) {
+    width: calc(100% - 250px);
+    padding-right: 3em;
+  }
+}
+
+.grid .ad {
+  @media (max-width: 620px) {
+    display: none;
+  }
+
+  p {
+    width: 100%;
+    text-align: right;
+    font-family: $proxima;
+    color: $light-purple;
+    font-size: 0.75em;
+  }
+}
+
+.sponsored-by {
+  width: 150px;
+  display: block;
+  margin-bottom: 1em;
+  @media (max-width: $desk-start) {
+    margin: 0 auto;
+  }
+}
+
+#header h1 {
+  margin-bottom: 0 !important;
+}
+
+.sans-serif {
+  font-family: $proxima;
+}
+
+
+.related {
+  position: relative;
+  padding-bottom: 3em;
+
+  .related-grid { padding: 24px; }
+
+  div.intro { margin-top: 1em; }
+  div.intro p {
+    font-family: $proxima;
+    width: 100%;
+    font-weight: 500;
+    margin-bottom: .75em;
+    text-align: left !important;
+
+    &.body-text { font-size: .875em; }
+
+    @media (min-width: $desk-start) {
+      margin: 0 auto;
+      text-align: center !important;
+      margin-bottom: 1em;
+
+      &.body-text {
+        width: 50%;
+      }
+    }
+  }
+
+  div.grid-item {
+    margin-bottom: 2em;
+    display: block;
+    text-decoration: none;
+
+    @media (max-width: 770px) {
+       &:after {
+        visibility: hidden;
+        display: block;
+        font-size: 0;
+        content: " ";
+        clear: both;
+        height: 0;
+      }
+    }
+
+
+    @media (min-width: 771px) {
+      // float: left;
+      // &:nth-of-type(even) {
+      //   float: right;
+      //   // padding-right: 24px;
+      // }
+      width: 50%;
+    }
+
+    &:hover {
+      img {
+        opacity: 0.5;
+      }
+      .text h2 {
+        text-decoration: underline;
+      }
+    }
+  }
+
+  h2.title {
+    margin-top: 0;
+    font-weight: 700;
+    line-height: 1.1;
+    margin-bottom: 0.25em;
+  }
+
+  img {
+    // float: left;
+    width: 120px;
+    margin-right: 30px;
+    display: inline-block;
+  }
+
+  .text {
+    float: right;
+    width: calc(100% - 150px)
+  }
+
+  .body-text {
+    width: 100%;
+    @media (min-width: 771px) {
+      width: 80%;
+    }
+  }
+
+}
+
+.grid-item {
+  box-sizing: border-box;
+  @media (min-width: 771px) {
+    &:nth-of-type(odd) {
+      float: left;
+      clear: both;
+    }
+    &:nth-of-type(even) {
+      float: right;
+    }
+  }
+}
+
+.clearfix:after {
+  visibility: hidden;
+  display: block;
+  font-size: 0;
+  content: " ";
+  clear: both;
+  height: 0;
+}
+
+.methodology {
+  font-family: $proxima;
+  color: $light-purple;
+  font-size: 0.75em;
+}
+
+
+.related {
+  margin-top: 3em;
+  background-color: rgba(80, 31, 132, 0.05);
+  border-top: 1px solid $light-purple;
+}
+
+.purple {
+  color: #501F84;
+}
+
+.align-right {
+  text-align: right;
+  padding-right: 15px;
+}
+
+.editors-note {
+  padding: 1em;
+  background-color: rgba(80, 31, 132, 0.05);
+}
+

@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>{{ PROJECT_NAME }}</title>
+
+    <meta name="description" content="{{ PROJECT_DESCRIPTION }}">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0" />
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+    <link rel="shortcut icon" href="http://media.northbynorthwestern.com/media/img/favicon-hi.ico" />
+    <!-- CHARTBEAT -->
+    <script type="text/javascript">var _sf_startpt=(new Date()).getTime()</script>
+
+    <!-- CSS -->
+    <script type="text/javascript" src="//use.typekit.net/rwj4edd.js"></script>
+    <script type="text/javascript">try{Typekit.load();}catch(e){}</script>
+    <script src='https://api.tiles.mapbox.com/mapbox.js/v2.1.9/mapbox.js'></script>
+    <link href='https://api.tiles.mapbox.com/mapbox.js/v2.1.9/mapbox.css' rel='stylesheet' />
+
+    <link rel="image_src" href="http://media.northbynorthwestern.com.s3.amazonaws.com/uploads/2015/_graphics/housing/nbn-housing-guide-teaser.jpg/"f >
+
+    {# {{ CSS.push('sass/style.scss') }} #}
+    <link rel="stylesheet" href="css/style.sass.css" />
+    {% block extra_css %}
+    {% endblock extra_css %}
+    {# {{ CSS.render('/css/style.sass.css') }} #}
+    {# <link rel="stylesheet" href="/css/style.sass.css" /> #}
+
+    <!-- JS -->
+    {{ JS.push('js/lib/modernizr.js') }}
+    {{ JS.render('js/app-header.min.js') }}
+
+    {% include '_social_tags.html' %}
+
+    {% block extra_head %}
+    {% endblock extra_head %}
+</head>
+<body>
+    {% block outer_content %}
+    <div id="bar" class="background-purple">
+        <a href="http://northbynorthwestern.com/"><img src="http://nbn-housing.s3.amazonaws.com/static/img/nbn-logo.png" alt="North by Northwestern"></a>
+    </div>
+
+    {% block header_content %}
+    {% endblock header_content %}
+
+    {% block content %}
+    {% endblock content %}
+
+    {% endblock outer_content %}
+
+    <div class="grid padded background-purple clear">
+      <div class="grid__item one-whole lap-and-up-one-quarter">
+      <p class="credit"><em>Reporting by&nbsp;</em>&nbsp;Rachel Oh, Justin Curto, Trevor Lystad, Meg Pisarczyk, Robert Bell, Claire Toomey, Alena Prcela, Mia Zanzucchi, Victoria Alfred-Levow, Kate Salvidio, Elly Rivera, Rachel Epstein, Jakob Lazzaro, Yoonjie Park, David Gleisner</p>
+      </div><!--
+     --><div class="grid__item one-whole lap-and-up-one-quarter">
+        <p class="credit"><em>Photos by&nbsp;</em>&nbsp;Rachel Oh, Justin Curto, Emma Kumer, Meg Pisarczyk, Virginia Nowakowski, Claire Toomey, Alena Prcela, Victoria Alfred-Levow, Kate Salvidio, Mia Zanzucchi, Elly Rivera, Rachel Epstein, Jakob Lazzaro, Brian Quistberg, Yoonjie Park, David Gleisner</p>
+      </div><!--
+     --><div class="grid__item one-whole lap-and-up-one-quarter">
+        <p class="credit"><em>Videos by&nbsp;</em>&nbsp;Mia Zanzucchi, Emma Kumer, Meg Pisarczyk, Virginia NOwakowski, Helen Lee, David Gordon, Jesus Campos, Helen Lee, Elissa Gray, Gabrielle Bienasz, Andy Brown, Elizabeth Guthrie, David Gleisner, Poppy Shen</p>
+      </div><!--
+     --><div class="grid__item one-whole lap-and-up-one-quarter">
+         <p class="credit"><em>Editing by&nbsp;</em>&nbsp;Libby Berry, Lila Reynolds, Maxine Whitely</p>
+        <p class="credit"><em>Design and development by&nbsp;</em>&nbsp;Alex Duner, Tyler Fisher, Hilary Fung, Dan Hill, KK Rebecca Lai, Maxine Whitely, Sheng Wu and Katie Zhu</p>
+        <p class="credit">This project is open source. <a href="https://github.com/northbynorthwestern/2017-housing-guide" style="color: white; text-decoration: underline;">Check it out on GitHub.</a></p>
+        <p class="credit">Data provided by Northwestern University Residential Services</p>
+      </div>`
+    </div>
+
+
+    {% block extra_foot %}
+    {% endblock extra_foot %}
+    {{ JS.push('js/lib/jquery.js') }}
+    {{ JS.push('js/lib/underscore.js') }}
+    {# {{ JS.push('js/lib/leaflet.js') }} #}
+    {# {{ JS.push('js/lib/leaflet-providers.js') }} #}
+    {{ JS.push('js/lib/chosen.jquery.min.js') }}
+    {{ JS.push('js/lib/responsiveslides.min.js') }}
+    {{ JS.push('js/app_config.js') }}
+    {{ JS.push('js/copy.js') }}
+    {{ JS.push('js/templates.js') }}
+    {{ JS.push('js/app.js') }}
+    {{ JS.render('js/app-footer.min.js') }}
+
+    {% block extra_foot_js %}{% endblock extra_foot_js %}
+
+  <script>
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+    ga('create', 'UA-15143352-1', 'auto');
+    ga('send', 'pageview');
+
+  </script>
+
+</body>
+</html>

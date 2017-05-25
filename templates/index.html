@@ -1,0 +1,209 @@
+{% extends '_base.html' %}
+
+{% block header_content %}
+<div id="header">
+    <h1><span class="smaller">The </span>Housing Guide</h1>
+    <a href="http://rezessentials.com"><img class="sponsored-by" src="http://media.northbynorthwestern.com.s3.amazonaws.com/uploads/2016/05/housing_guide/rezessentials-sponsoredby.png"></a>
+    <div class="grid">
+        <div class="grid__item one-whole desk-two-thirds float-left">
+            <p class="body-text intro">Your first college home can be a taste of freedom and provide you with a great community, but the housing selection process can also be daunting. <a target="_blank" href="http://northbynorthwestern.com">North by Northwestern's</a> Freshman Housing Guide has you covered. Use the filters to see which buildings work for you, then click a building name to see video, photos and more.</p>
+        </div><!--
+     --><div class="grid__item one-whole desk-one-third">
+            <div id="search-container">
+            </div>
+        </div>
+  <div style="clear: both;"></div>
+    </div>
+</div>
+{% endblock %}
+
+
+{% block content %}
+    <div class="grid clear border-bottom">
+
+        <div id="filter-container" class="grid__item one-whole desk-one-fifth padded">
+            <h4>Filter <a href="#about-filters"><span class="epsilon">or read more</span></a></h4>
+            <div class="grid">
+                <div class="grid__item one-whole lap-one-fifth">
+                    <ul>
+                        <li>
+                            <input type="checkbox" class="filter" id="north-filter">
+                            <label for="north-filter">North Campus</label>
+                        </li>
+                        <li>
+                            <input type="checkbox" class="filter" id="south-filter">
+                            <label for="south-filter">South Campus</label>
+                        </li>
+                    </ul>
+                </div><!--
+             --><div class="grid__item one-whole lap-one-fifth">
+                    <ul>
+                        <li>
+                            <input type="checkbox" class="filter" id="rescol-filter">
+                            <label for="rescol-filter">Res College</label>
+                        </li>
+                        <li>
+                            <input type="checkbox" class="filter" id="rescomm-filter">
+                            <label for="rescomm-filter">Res Community</label>
+                        </li>
+                        <li>
+                            <input type="checkbox" class="filter" id="reshall-filter">
+                            <label for="reshall-filter">Res Hall</label>
+                        </li>
+                    </ul>
+                </div><!--
+             --><div class="grid__item one-whole lap-one-fifth">
+                    <ul>
+                        <li>
+                            <input type="checkbox" class="filter" id="small-filter">
+                            <label for="small-filter">Small</label>
+                        </li>
+                        <li>
+                            <input type="checkbox" class="filter" id="med-filter">
+                            <label for="med-filter">Medium</label>
+                        </li>
+                        <li>
+                            <input type="checkbox" class="filter" id="large-filter">
+                            <label for="large-filter">Large</label>
+                        </li>
+                    </ul>
+                </div><!--
+             --><div class="grid__item one-whole lap-one-fifth">
+                    <ul>
+                        <li>
+                            <input type="checkbox" class="filter" id="ac-filter">
+                            <label for="ac-filter">Has A.C.</label>
+                        </li>
+                        <li>
+                            <input type="checkbox" class="filter" id="dining-filter">
+                            <label for="dining-filter">Has dining hall</label>
+                        </li>
+                    </ul>
+                </div><!--
+             --><div class="grid__item one-whole lap-one-fifth">
+                    <ul>
+                        <li>
+                            <input type="checkbox" class="filter" id="freshmen-filter">
+                            <label for="freshmen-filter">Freshmen only</label>
+                        </li>
+                        <li>
+                            <input type="checkbox" class="filter" id="female-filter">
+                            <label for="female-filter">Female only</label>
+                        </li>
+                        <li>
+                            <input type="checkbox" class="filter" id="opengender-filter">
+                            <label for="opengender-filter">Gender open</label>
+                        </li>
+
+                    </ul>
+                </div>
+            </div>
+            <div id="clear-filter-button" class="clear-filter padding-top">
+                <h4><a><span>Clear all</span></a></h4>
+            </div>
+      <div id="temp">
+      </div>
+        </div><!-- End filter grid item
+
+     --><div id="explore-container" class="grid__item one-whole desk-four-fifths">
+
+            <div class="grid">
+
+                <div id="map-container" class="grid__item one-whole lap-and-up-one-half padding-top">
+                    <h4>Explore</h4>
+                    <div id="map">
+                    </div>
+                </div><!-- End map grid item
+
+             --><div id="table-container" class="grid__item one-whole lap-and-up-one-half padding-top">
+
+                    <table>
+                        <thead>
+                            <tr>
+                                <td>Hall</td>
+                                <td class="align-right">Residents</td>
+                                <td>Type</td>
+                            </tr>
+                        </thead>
+                        <tbody>
+                        {% for dorm in COPY.dorms %}
+                            {% if dorm.short_name != 'short_name' %}
+                                <tr onmouseover="highlightTable(this)" onmouseout="resetHighlightTable(this)">
+                                    <td><p class="dorm-name" value="{{dorm.name}}" data-fullname="{{ dorm.name }}"><a href="hall/{{ dorm.slug }}">{{ dorm.short_name }}</a></p></td>
+                                    <td><p style="text-align: right; padding-right: 10px;">{{ dorm.size|int }}</p></td>
+                                    <td><p>{{ dorm.dorm_type }}</p></td>
+                                </tr>
+                            {% endif %}
+                        {% endfor %}
+                        </tbody>
+                    </table>
+                    <div id="legend-container">
+                        <div id="legend">
+                            <div class="dot perfect-fit"></div>
+                            <p class="float-left">Perfect</p>
+                            <div class="dot good-fit"></div>
+                            <p class="float-left">¯\_(ツ)_/¯</p>
+                            <div class="dot bad-fit"></div>
+                            <p class="float-left">Not your type</p>
+                        </div>
+                    </div>
+                </div><!-- End table grid item -->
+            </div><!-- End explore grid item -->
+
+        </div><!-- End nested grid container -->
+
+    </div><!-- End grid container -->
+
+
+    <div class="grid padded">
+      <div class="filter-exp grid__item one-whole">
+        <p class="body-text" style="padding: 1em; background-color: rgba(80, 31, 132, 0.05);"><strong>Editor's Note:</strong> This year North by Northwestern did not include images or quotes from 1838 Chicago, Shepard Hall and Goodrich House as they were closed for rennovations last year. We've included all relevant information available.</p>
+      </div>
+    </div>
+
+    <h3 class="padding-top padding-left">About the filters</h3>
+    <div class="grid padded">
+        <div class="filter-exp grid__item one-whole lap-and-up-one-third">
+            <h2>North and South Campus</h2>
+            <p class="body-text">We chose to divide the unofficial "North Campus" and "South Campus" by Foster Street, so anything south of Foster is South Campus and anything north of Foster is North Campus.</p>
+        </div><!--
+     --><div class="filter-exp grid__item one-whole lap-and-up-one-third">
+            <h2>Types of halls</h2>
+            <p class="body-text">The university categorizes its halls into four types. A <a href="http://www.northwestern.edu/residential-communities/" target="_blank">residential community</a> has student-organized events and live-in faculty. A <a href="http://www.northwestern.edu/residentialcolleges/visitors/info/index.html" target="_blank">residential college</a> has a theme and offers activities and specialized classes supported by faculty fellows. <a href="http://www.northwestern.edu/living/housing-options/special-interest/index.html" target="_blank">Special interest housing</a> includes Interfaith Residence Hall in 1835 Hinman, GREEN House and other halls with particular focuses. A residence hall offers a classic college experience.
+        </div><!--
+     --><div class="filter-exp grid__item one-whole lap-and-up-one-third">
+            <h2>Gender Open Housing</h2>
+            <p class="body-text"><a target="_blank" href="http://www.northwestern.edu/living/housing-options/special-interest/gender-open/gender-open-housing/index.html">Gender Open Housing</a> has existed since 2010 as "an arrangement whereby students, regardless of sex, gender, or gender identity, are permitted to share a room or suite in select areas of Northwestern’s residence halls." Currently, no first-year students are eligible for gender open housing.</p>
+        </div>
+    </div>
+
+    <div class="related clearfix" id="related">
+
+      <div class="padded intro">
+        <p class="body-text"><a target="_blank" href="http://northbynorthwestern.com">North by Northwestern</a> is an independent student-run publication that covers all things Northwestern, from campus speeches to the best campus hookup spots. We don't publish over the summer, but follow us on <a target="_blank" href="http://twitter.com/nbn_tweets">Twitter</a> and on <a target="_blank" href="https://www.facebook.com/northbynorthwestern">Facebook</a> for content starting during Wildcat Welcome.</p>
+        <p class="sans-serif"><strong>In the meantime, check out some of these other <span class="purple">North by Northwestern</span> stories to help you prepare for freshman year:</strong></p>
+      </div>
+
+      <div class="related-grid">
+        {% for article in COPY.featured_articles %}
+          {% if loop.index % 2 == 0 %}
+          <div class="filter-exp grid-item clearfix">
+          {% else %}
+          <div class="filter-exp grid-item">
+          {% endif %}
+            <a href="{{ article.url }}" target="_blank">
+              <img src="{{ article.img }}">
+              <div class="text">
+                <h2 class="title">{{ article.title }}</h2>
+                <p class="body-text">{{ article.teaser_sentence }}</p>
+              </div>
+            </a>
+          </div>
+        {% endfor %}
+      </div>
+    </div>
+{% endblock %}
+
+{% block extra_foot_js %}
+    <script src="js/home.js"></script>
+{% endblock %}
