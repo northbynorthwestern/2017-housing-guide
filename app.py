@@ -19,7 +19,6 @@ app.jinja_env.filters['urlencode'] = urlencode_filter
 
 # Example application views
 @app.route('/')
-@oauth.oauth_required
 def index():
     """
     Example view demonstrating rendering a simple HTML page.
