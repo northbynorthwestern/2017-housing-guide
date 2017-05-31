@@ -23,7 +23,7 @@ pycrypto==2.6
 python-dateutil==2.2
 requests==1.1.0
 rsa==3.1.2
-six==1.5.2
+six==1.10.0
 slimit==0.7.4
 smartypants==2.0.0
 ssh==1.7.14
