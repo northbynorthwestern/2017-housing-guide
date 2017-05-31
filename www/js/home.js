@@ -14,9 +14,9 @@ window.parseBoolean = function(string) {
   var bool;
   bool = (function() {
     switch (false) {
-      case string.toLowerCase() !== 'true':
+      case string.toLowerCase() !== 'True':
         return true;
-      case string.toLowerCase() !== 'false':
+      case string.toLowerCase() !== 'False':
         return false;
     }
   })();
@@ -180,6 +180,7 @@ var dorms = {};
 var create_dorms = function() {
   _.each(COPY.dorms, function(dorm) {
       var name = dorm['name'];
+      console.log(dorm);
 
       dorms[name] = {};
 
@@ -235,7 +236,6 @@ var create_dorms = function() {
       dorms[name]['female'] = parseBoolean(dorm['female_only']);
       dorms[name]['opengender'] = parseBoolean(dorm['open_gender']);
   });
-  console.log(dorms);
 };
 
 // count true properties of an object
@@ -367,8 +367,9 @@ clearFilter();
 $(document).ready(function(){
   var dorms_array = [];
   _.each(COPY.dorms, function(dorm) {
-      dorms_array.push("{{dorm}}");
+      dorms_array.push(dorm);
   });
+
   create_dorms();
 
 });

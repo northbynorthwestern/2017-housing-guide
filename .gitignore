@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 *.py[co]
 *.sw[op]
 
@@ -50,3 +51,7 @@ data/gdoc*.csv
 .dorms_gzip
 .dorms_html
 dist
+=======
+*.pyc
+*.xlsx
+>>>>>>> c5a01387c0773f393a3bc2f231c1066cf2a2277a
