@@ -1,7 +1,7 @@
 {% extends "_base.html" %}
 
 {% block extra_css %}
-<link rel="stylesheet" href="../css/style.sass.css" />
+<link rel="stylesheet" href="../../css/style.sass.css" />
 <link rel="stylesheet" href="/css/style.sass.css" />
 
 {% endblock extra_css %}
@@ -12,7 +12,7 @@
     <div class="grid">
         <div class="grid__item one-whole desk-two-thirds float-left">
             <h1><a href="../../"><span class="smaller">The </span>Housing Guide</a></h1>
-            <a href="http://rezessentials.com"><img class="sponsored-by" src="http://media.northbynorthwestern.com.s3.amazonaws.com/uploads/2016/05/housing_guide/rezessentials-sponsoredby.png"></a>
+            <!--<a href="http://rezessentials.com"><img class="sponsored-by" src="http://media.northbynorthwestern.com.s3.amazonaws.com/uploads/2016/05/housing_guide/rezessentials-sponsoredby.png"></a>-->
         </div><!--
      --><div class="grid__item one-whole desk-one-third">
             <div id="search-container">
@@ -37,10 +37,10 @@
     <div class="grid">
         <div id="detail-main-container" class="grid__item one-whole desk-three-quarters float-right">
 
-            <div class="ad float-right">
+            <!-- <div class="ad float-right">
               <p class="small">Advertisement</p>
-              <a href="http://rezessentials.com" target="_blank"><img src="http://media.northbynorthwestern.com.s3.amazonaws.com/uploads/2016/05/23/resessentials_ad.png"></a>
-            </div>
+             <a href="http://rezessentials.com" target="_blank"><img src="http://media.northbynorthwestern.com.s3.amazonaws.com/uploads/2016/05/23/resessentials_ad.png"></a>
+            </div>-->
 
             <div class="header">
               <h2>{{ dorm.name }}</h2>
@@ -49,10 +49,10 @@
             </div>
 
             <div class="padding-top">
-              <div id="photo-tab" class="tab float-left" >
+              <!--<div id="photo-tab" class="tab float-left" >
               <img src="http://nbn-housing.s3.amazonaws.com/static/img/photo-icon.png">
               <h3>Photo</h3>
-            </div>
+            </div>-->
 
             {% if dorm.video_embed %}
             <div id="video-tab" class="tab float-left">
@@ -73,9 +73,11 @@
               {% endfor %}
           </ul>
           </div>
-                    <div id="embed-container">
-
-          </div>
+              {% if dorm.video_embed %}
+              <div id="embed-container">
+                <iframe src="{{ dorm.video_embed }}" webkitAllowFullScreen mozallowfullscreen allowFullScreen></iframe>
+              </div>
+              {% endif %}
                 </div>
 
         <h3 class="padding-top hidden-desktop">Vital stats</h3>

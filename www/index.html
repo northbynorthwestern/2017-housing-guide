@@ -1,0 +1,583 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Housing Guide</title>
+
+    <meta name="description" content="The North by Northwestern Freshman Housing Guide, featuring photos, videos, statistics and the opinions of current residents of Northwestern University&#39;s housing options.">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0" />
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+    <link rel="shortcut icon" href="http://media.northbynorthwestern.com/media/img/favicon-hi.ico" />
+    <!-- CHARTBEAT -->
+    <script type="text/javascript">var _sf_startpt=(new Date()).getTime()</script>
+
+    <!-- CSS -->
+    <script type="text/javascript" src="//use.typekit.net/rwj4edd.js"></script>
+    <script type="text/javascript">try{Typekit.load();}catch(e){}</script>
+    <script src='https://api.tiles.mapbox.com/mapbox.js/v2.1.9/mapbox.js'></script>
+    <link href='https://api.tiles.mapbox.com/mapbox.js/v2.1.9/mapbox.css' rel='stylesheet' />
+
+    <link rel="image_src" href="http://media.northbynorthwestern.com.s3.amazonaws.com/uploads/2015/_graphics/housing/nbn-housing-guide-teaser.jpg/"f >
+
+    
+    <link rel="stylesheet" href="css/style.sass.css" />
+    
+    
+    
+    
+
+    <!-- JS -->
+    
+    <script type="text/javascript" src="js/app-header.min.js?1496352813"></script>
+
+    <meta name="keywords" content="2015, northbynorthwestern, northwestern, housing, guide, freshman, dorm, dormitory, evanston, illinois, college">
+<meta name="description" content="The North by Northwestern Freshman Housing Guide, featuring photos, videos, statistics and the opinions of current residents of Northwestern University's housing options.">
+
+
+
+<meta name="twitter:card" content="summary">
+<meta name="twitter:site" content="@nbn_tweets">
+
+
+<meta property="og:title" content="North by Northwestern Housing Guide" />
+<meta property="og:url" content="http://apps.northbynorthwestern.com/housing/2015" />
+<meta property="og:type" content="article" />
+<meta property="og:description" content="The North by Northwestern Freshman Housing Guide, featuring photos, videos, statistics and the opinions of current residents of Northwestern University&#39;s housing options." />
+<meta property="og:site_name" content="northbynorthwestern.com" />
+<meta property="og:image" content="http://media.northbynorthwestern.com.s3.amazonaws.com/uploads/2015/_graphics/housing/nbn-housing-guide-teaser.jpg" />
+
+    
+    
+</head>
+<body>
+    
+    <div id="bar" class="background-purple">
+        <a href="http://northbynorthwestern.com/"><img src="http://nbn-housing.s3.amazonaws.com/static/img/nbn-logo.png" alt="North by Northwestern"></a>
+    </div>
+
+    
+<div id="header">
+    <h1><span class="smaller">The </span>Housing Guide</h1>
+    <!--no longer sponsored
+    <a href="http://rezessentials.com"><img class="sponsored-by" src="http://media.northbynorthwestern.com.s3.amazonaws.com/uploads/2016/05/housing_guide/rezessentials-sponsoredby.png"></a>
+    -->
+    <div class="grid">
+        <div class="grid__item one-whole desk-two-thirds float-left">
+            <p class="body-text intro">Your first college home can be a taste of freedom and provide you with a great community, but the housing selection process can also be daunting. <a target="_blank" href="http://northbynorthwestern.com">North by Northwestern's</a> Freshman Housing Guide has you covered. Use the filters to see which buildings work for you, then click a building name to see video, photos and more.</p>
+        </div><!--
+     --><div class="grid__item one-whole desk-one-third">
+            <div id="search-container">
+            </div>
+        </div>
+  <div style="clear: both;"></div>
+    </div>
+</div>
+
+
+    
+    <div class="grid clear border-bottom">
+
+        <div id="filter-container" class="grid__item one-whole desk-one-fifth padded">
+            <h4>Filter <a href="#about-filters"><span class="epsilon">or read more</span></a></h4>
+            <div class="grid">
+                <div class="grid__item one-whole lap-one-fifth">
+                    <ul>
+                        <li>
+                            <input type="checkbox" class="filter" id="north-filter">
+                            <label for="north-filter">North Campus</label>
+                        </li>
+                        <li>
+                            <input type="checkbox" class="filter" id="south-filter">
+                            <label for="south-filter">South Campus</label>
+                        </li>
+                    </ul>
+                </div><!--
+             --><div class="grid__item one-whole lap-one-fifth">
+                    <ul>
+                        <li>
+                            <input type="checkbox" class="filter" id="rescol-filter">
+                            <label for="rescol-filter">Res College</label>
+                        </li>
+                        <li>
+                            <input type="checkbox" class="filter" id="rescomm-filter">
+                            <label for="rescomm-filter">Res Community</label>
+                        </li>
+                        <li>
+                            <input type="checkbox" class="filter" id="reshall-filter">
+                            <label for="reshall-filter">Res Hall</label>
+                        </li>
+                    </ul>
+                </div><!--
+             --><div class="grid__item one-whole lap-one-fifth">
+                    <ul>
+                        <li>
+                            <input type="checkbox" class="filter" id="small-filter">
+                            <label for="small-filter">Small</label>
+                        </li>
+                        <li>
+                            <input type="checkbox" class="filter" id="med-filter">
+                            <label for="med-filter">Medium</label>
+                        </li>
+                        <li>
+                            <input type="checkbox" class="filter" id="large-filter">
+                            <label for="large-filter">Large</label>
+                        </li>
+                    </ul>
+                </div><!--
+             --><div class="grid__item one-whole lap-one-fifth">
+                    <ul>
+                        <li>
+                            <input type="checkbox" class="filter" id="ac-filter">
+                            <label for="ac-filter">Has A.C.</label>
+                        </li>
+                        <li>
+                            <input type="checkbox" class="filter" id="dining-filter">
+                            <label for="dining-filter">Has dining hall</label>
+                        </li>
+                    </ul>
+                </div><!--
+             --><div class="grid__item one-whole lap-one-fifth">
+                    <ul>
+                        <li>
+                            <input type="checkbox" class="filter" id="freshmen-filter">
+                            <label for="freshmen-filter">Freshmen only</label>
+                        </li>
+                        <li>
+                            <input type="checkbox" class="filter" id="female-filter">
+                            <label for="female-filter">Female only</label>
+                        </li>
+                        <li>
+                            <input type="checkbox" class="filter" id="opengender-filter">
+                            <label for="opengender-filter">Gender open</label>
+                        </li>
+
+                    </ul>
+                </div>
+            </div>
+            <div id="clear-filter-button" class="clear-filter padding-top">
+                <h4><a><span>Clear all</span></a></h4>
+            </div>
+      <div id="temp">
+      </div>
+        </div><!-- End filter grid item
+
+     --><div id="explore-container" class="grid__item one-whole desk-four-fifths">
+
+            <div class="grid">
+
+                <div id="map-container" class="grid__item one-whole lap-and-up-one-half padding-top">
+                    <h4>Explore</h4>
+                    <div id="map">
+                    </div>
+                </div><!-- End map grid item
+
+             --><div id="table-container" class="grid__item one-whole lap-and-up-one-half padding-top">
+
+                    <table>
+                        <thead>
+                            <tr>
+                                <td>Hall</td>
+                                <td class="align-right">Residents</td>
+                                <td>Type</td>
+                            </tr>
+                        </thead>
+                        <tbody>
+                        
+                            
+                                <tr onmouseover="highlightTable(this)" onmouseout="resetHighlightTable(this)">
+                                    <td><p class="dorm-name" value="1835 Hinman/Willard" data-fullname="1835 Hinman/Willard"><a href="hall/1835-hinman">1835 Hinman</a></p></td>
+                                    <td><p style="text-align: right; padding-right: 10px;">216</p></td>
+                                    <td><p>Hall</p></td>
+                                </tr>
+                            
+                        
+                            
+                                <tr onmouseover="highlightTable(this)" onmouseout="resetHighlightTable(this)">
+                                    <td><p class="dorm-name" value="Allison Residential Community" data-fullname="Allison Residential Community"><a href="hall/allison">Allison</a></p></td>
+                                    <td><p style="text-align: right; padding-right: 10px;">363</p></td>
+                                    <td><p>Community</p></td>
+                                </tr>
+                            
+                        
+                            
+                                <tr onmouseover="highlightTable(this)" onmouseout="resetHighlightTable(this)">
+                                    <td><p class="dorm-name" value="Ayers College of Commerce and Industry" data-fullname="Ayers College of Commerce and Industry"><a href="hall/ayers">Ayers</a></p></td>
+                                    <td><p style="text-align: right; padding-right: 10px;">170</p></td>
+                                    <td><p>College</p></td>
+                                </tr>
+                            
+                        
+                            
+                                <tr onmouseover="highlightTable(this)" onmouseout="resetHighlightTable(this)">
+                                    <td><p class="dorm-name" value="Bobb/McCulloch Hall" data-fullname="Bobb/McCulloch Hall"><a href="hall/bobb-mcculloch">Bobb/McCulloch</a></p></td>
+                                    <td><p style="text-align: right; padding-right: 10px;">496</p></td>
+                                    <td><p>Hall</p></td>
+                                </tr>
+                            
+                        
+                            
+                                <tr onmouseover="highlightTable(this)" onmouseout="resetHighlightTable(this)">
+                                    <td><p class="dorm-name" value="Chapin Hall" data-fullname="Chapin Hall"><a href="hall/chapin">Chapin</a></p></td>
+                                    <td><p style="text-align: right; padding-right: 10px;">72</p></td>
+                                    <td><p>College</p></td>
+                                </tr>
+                            
+                        
+                            
+                                <tr onmouseover="highlightTable(this)" onmouseout="resetHighlightTable(this)">
+                                    <td><p class="dorm-name" value="College of Cultural and Community Studies" data-fullname="College of Cultural and Community Studies"><a href="hall/college-of-cultural-and-community-studies">College of Cultural and Community Studies</a></p></td>
+                                    <td><p style="text-align: right; padding-right: 10px;">40</p></td>
+                                    <td><p>College</p></td>
+                                </tr>
+                            
+                        
+                            
+                                <tr onmouseover="highlightTable(this)" onmouseout="resetHighlightTable(this)">
+                                    <td><p class="dorm-name" value="East Fairchild (Communications Residential College)" data-fullname="East Fairchild (Communications Residential College)"><a href="hall/east-fairchild">East Fairchild</a></p></td>
+                                    <td><p style="text-align: right; padding-right: 10px;">109</p></td>
+                                    <td><p>College</p></td>
+                                </tr>
+                            
+                        
+                            
+                                <tr onmouseover="highlightTable(this)" onmouseout="resetHighlightTable(this)">
+                                    <td><p class="dorm-name" value="Elder Residential Community" data-fullname="Elder Residential Community"><a href="hall/elder">Elder</a></p></td>
+                                    <td><p style="text-align: right; padding-right: 10px;">345</p></td>
+                                    <td><p>Community</p></td>
+                                </tr>
+                            
+                        
+                            
+                                <tr onmouseover="highlightTable(this)" onmouseout="resetHighlightTable(this)">
+                                    <td><p class="dorm-name" value="GREEN House" data-fullname="GREEN House"><a href="hall/green-house">GREEN House</a></p></td>
+                                    <td><p style="text-align: right; padding-right: 10px;">40</p></td>
+                                    <td><p>Special Interest</p></td>
+                                </tr>
+                            
+                        
+                            
+                                <tr onmouseover="highlightTable(this)" onmouseout="resetHighlightTable(this)">
+                                    <td><p class="dorm-name" value="Hobart House (Womens Residential College)" data-fullname="Hobart House (Womens Residential College)"><a href="hall/hobart-house">Hobart House</a></p></td>
+                                    <td><p style="text-align: right; padding-right: 10px;">50</p></td>
+                                    <td><p>College</p></td>
+                                </tr>
+                            
+                        
+                            
+                                <tr onmouseover="highlightTable(this)" onmouseout="resetHighlightTable(this)">
+                                    <td><p class="dorm-name" value="Rogers House" data-fullname="Rogers House"><a href="hall/rogers-house">Rogers House</a></p></td>
+                                    <td><p style="text-align: right; padding-right: 10px;">49</p></td>
+                                    <td><p>Hall</p></td>
+                                </tr>
+                            
+                        
+                            
+                                <tr onmouseover="highlightTable(this)" onmouseout="resetHighlightTable(this)">
+                                    <td><p class="dorm-name" value="Sargent Hall" data-fullname="Sargent Hall"><a href="hall/sargent">Sargent Hall</a></p></td>
+                                    <td><p style="text-align: right; padding-right: 10px;">157</p></td>
+                                    <td><p>Hall</p></td>
+                                </tr>
+                            
+                        
+                            
+                                <tr onmouseover="highlightTable(this)" onmouseout="resetHighlightTable(this)">
+                                    <td><p class="dorm-name" value="Slivka Residential College" data-fullname="Slivka Residential College"><a href="hall/slivka">Slivka</a></p></td>
+                                    <td><p style="text-align: right; padding-right: 10px;">140</p></td>
+                                    <td><p>College</p></td>
+                                </tr>
+                            
+                        
+                            
+                                <tr onmouseover="highlightTable(this)" onmouseout="resetHighlightTable(this)">
+                                    <td><p class="dorm-name" value="West Fairchild (International Studies Residential College)" data-fullname="West Fairchild (International Studies Residential College)"><a href="hall/west-fairchild">West Fairchild</a></p></td>
+                                    <td><p style="text-align: right; padding-right: 10px;">106</p></td>
+                                    <td><p>College</p></td>
+                                </tr>
+                            
+                        
+                            
+                                <tr onmouseover="highlightTable(this)" onmouseout="resetHighlightTable(this)">
+                                    <td><p class="dorm-name" value="Public Affairs Residential College at North Mid Quads" data-fullname="Public Affairs Residential College at North Mid Quads"><a href="hall/parc">PARC (NMQ)</a></p></td>
+                                    <td><p style="text-align: right; padding-right: 10px;">72</p></td>
+                                    <td><p>College</p></td>
+                                </tr>
+                            
+                        
+                            
+                                <tr onmouseover="highlightTable(this)" onmouseout="resetHighlightTable(this)">
+                                    <td><p class="dorm-name" value="Shepard Residential College at South Mid Quads" data-fullname="Shepard Residential College at South Mid Quads"><a href="hall/smq">Shepard Residential College (SMQ)</a></p></td>
+                                    <td><p style="text-align: right; padding-right: 10px;">74</p></td>
+                                    <td><p>College</p></td>
+                                </tr>
+                            
+                        
+                            
+                                <tr onmouseover="highlightTable(this)" onmouseout="resetHighlightTable(this)">
+                                    <td><p class="dorm-name" value="Shepard Hall" data-fullname="Shepard Hall"><a href="hall/shepard">Shepard Hall</a></p></td>
+                                    <td><p style="text-align: right; padding-right: 10px;">153</p></td>
+                                    <td><p>Hall</p></td>
+                                </tr>
+                            
+                        
+                            
+                                <tr onmouseover="highlightTable(this)" onmouseout="resetHighlightTable(this)">
+                                    <td><p class="dorm-name" value="Foster-Walker Complex" data-fullname="Foster-Walker Complex"><a href="hall/plex">Plex</a></p></td>
+                                    <td><p style="text-align: right; padding-right: 10px;">582</p></td>
+                                    <td><p>Hall</p></td>
+                                </tr>
+                            
+                        
+                            
+                                <tr onmouseover="highlightTable(this)" onmouseout="resetHighlightTable(this)">
+                                    <td><p class="dorm-name" value="560 Lincoln" data-fullname="560 Lincoln"><a href="hall/lincoln">560 Lincoln</a></p></td>
+                                    <td><p style="text-align: right; padding-right: 10px;">422</p></td>
+                                    <td><p>Hall</p></td>
+                                </tr>
+                            
+                        
+                            
+                                <tr onmouseover="highlightTable(this)" onmouseout="resetHighlightTable(this)">
+                                    <td><p class="dorm-name" value="1838 Chicago" data-fullname="1838 Chicago"><a href="hall/chicago">1838 Chicago</a></p></td>
+                                    <td><p style="text-align: right; padding-right: 10px;">120</p></td>
+                                    <td><p>Community</p></td>
+                                </tr>
+                            
+                        
+                            
+                                <tr onmouseover="highlightTable(this)" onmouseout="resetHighlightTable(this)">
+                                    <td><p class="dorm-name" value="Lindgren House" data-fullname="Lindgren House"><a href="hall/lindgren">Lindgren House</a></p></td>
+                                    <td><p style="text-align: right; padding-right: 10px;">37</p></td>
+                                    <td><p>Hall</p></td>
+                                </tr>
+                            
+                        
+                        </tbody>
+                    </table>
+                    <div id="legend-container">
+                        <div id="legend">
+                            <div class="dot perfect-fit"></div>
+                            <p class="float-left">Perfect</p>
+                            <div class="dot good-fit"></div>
+                            <p class="float-left">¯\_(ツ)_/¯</p>
+                            <div class="dot bad-fit"></div>
+                            <p class="float-left">Not your type</p>
+                        </div>
+                    </div>
+                </div><!-- End table grid item -->
+            </div><!-- End explore grid item -->
+
+        </div><!-- End nested grid container -->
+
+    </div><!-- End grid container -->
+
+
+    <!--note from 2016
+    
+    <div class="grid padded">
+      <div class="filter-exp grid__item one-whole">
+        <p class="body-text" style="padding: 1em; background-color: rgba(80, 31, 132, 0.05);"><strong>Editor's Note:</strong> This year North by Northwestern did not include images or quotes from 1838 Chicago, Shepard Hall and Goodrich House as they were closed for rennovations last year. We've included all relevant information available.</p>
+      </div>
+    </div>-->
+
+    <h3 class="padding-top padding-left">About the filters</h3>
+    <div class="grid padded">
+        <div class="filter-exp grid__item one-whole lap-and-up-one-third">
+            <h2>North and South Campus</h2>
+            <p class="body-text">We chose to divide the unofficial "North Campus" and "South Campus" by Foster Street, so anything south of Foster is South Campus and anything north of Foster is North Campus.</p>
+        </div><!--
+     --><div class="filter-exp grid__item one-whole lap-and-up-one-third">
+            <h2>Types of halls</h2>
+            <p class="body-text">The university categorizes its halls into four types. A <a href="http://www.northwestern.edu/residential-communities/" target="_blank">residential community</a> has student-organized events and live-in faculty. A <a href="http://www.northwestern.edu/residentialcolleges/visitors/info/index.html" target="_blank">residential college</a> has a theme and offers activities and specialized classes supported by faculty fellows. <a href="http://www.northwestern.edu/living/housing-options/special-interest/index.html" target="_blank">Special interest housing</a> includes Interfaith Residence Hall in 1835 Hinman, GREEN House and other halls with particular focuses. A residence hall offers a classic college experience.
+        </div><!--
+     --><div class="filter-exp grid__item one-whole lap-and-up-one-third">
+            <h2>Gender Open Housing</h2>
+            <p class="body-text"><a target="_blank" href="http://www.northwestern.edu/living/housing-options/special-interest/gender-open/gender-open-housing/index.html">Gender Open Housing</a> has existed since 2010 as "an arrangement whereby students, regardless of sex, gender, or gender identity, are permitted to share a room or suite in select areas of Northwestern’s residence halls." Currently, no first-year students are eligible for gender open housing.</p>
+        </div>
+    </div>
+
+    <div class="related clearfix" id="related">
+
+      <div class="padded intro">
+        <p class="body-text"><a target="_blank" href="http://northbynorthwestern.com">North by Northwestern</a> is an independent student-run publication that covers all things Northwestern, from campus speeches to the best campus hookup spots. We don't publish over the summer, but follow us on <a target="_blank" href="http://twitter.com/nbn_tweets">Twitter</a> and on <a target="_blank" href="https://www.facebook.com/northbynorthwestern">Facebook</a> for content starting during Wildcat Welcome.</p>
+        <p class="sans-serif"><strong>In the meantime, check out some of these other <span class="purple">North by Northwestern</span> stories to help you prepare for freshman year:</strong></p>
+      </div>
+
+      <div class="related-grid">
+        
+          
+          <div class="filter-exp grid-item">
+          
+            <a href="http://apps.northbynorthwestern.com/gameday/" target="_blank">
+              <img src="http://media.northbynorthwestern.com.s3.amazonaws.com/uploads/2015/_graphics/housing/articles/gameday.png">
+              <div class="text">
+                <h2 class="title">Gameday</h2>
+                <p class="body-text">Prepare for the experience of your first Northwestern football game and learn about the terrifying, heartbreaking and chaotic aspects of gameday.</p>
+              </div>
+            </a>
+          </div>
+        
+          
+          <div class="filter-exp grid-item clearfix">
+          
+            <a href="http://www.northbynorthwestern.com/story/when-should-you-do-laundry/" target="_blank">
+              <img src="http://media.northbynorthwestern.com.s3.amazonaws.com/uploads/2017/06/01/Screen_Shot_2017-06-01_at_2.22.54_AM.png">
+              <div class="text">
+                <h2 class="title">When should you do laundry?</h2>
+                <p class="body-text">NBN tracked data from LaundryView for each undergraduate residential building to determine high and low traffic times for your least favorite chore.</p>
+              </div>
+            </a>
+          </div>
+        
+          
+          <div class="filter-exp grid-item">
+          
+            <a href="http://www.northbynorthwestern.com/story/hinman-residents-turn-dorm-room-into-a-ball-pit/" target="_blank">
+              <img src="http://media.northbynorthwestern.com.s3.amazonaws.com/uploads/2015/_graphics/housing/articles/ballpit.png">
+              <div class="text">
+                <h2 class="title">Dormroom Ball Pits</h2>
+                <p class="body-text">Bedrooms, ball pits – they're all the same at Northwestern. Some Hinman residents decided their room needed a little more decoration.</p>
+              </div>
+            </a>
+          </div>
+        
+          
+          <div class="filter-exp grid-item clearfix">
+          
+            <a href="http://www.northbynorthwestern.com/story/friend-me-freshmen-facebook-archetypes/" target="_blank">
+              <img src="http://media.northbynorthwestern.com.s3.amazonaws.com/uploads/2015/_graphics/housing/articles/facebook.png">
+              <div class="text">
+                <h2 class="title">Freshmen Facebook Etiquette</h2>
+                <p class="body-text">The amount of Facebook activity that goes down during Welcome Week can be overwhelming. Here's how to navigate all those scary friend requests.</p>
+              </div>
+            </a>
+          </div>
+        
+          
+          <div class="filter-exp grid-item">
+          
+            <a href="http://apps.northbynorthwestern.com/majors/" target="_blank">
+              <img src="http://media.northbynorthwestern.com.s3.amazonaws.com/uploads/2015/_graphics/housing/articles/majors.png">
+              <div class="text">
+                <h2 class="title">A Decade of Degrees</h2>
+                <p class="body-text">Going in undecided? Explore how the popularity of majors has changed over time – maybe you'll find the one that's perfect for you.</p>
+              </div>
+            </a>
+          </div>
+        
+          
+          <div class="filter-exp grid-item clearfix">
+          
+            <a href="http://www.northbynorthwestern.com/story/when-should-you-go-the-gym/" target="_blank">
+              <img src="http://media.northbynorthwestern.com.s3.amazonaws.com/uploads/2017/06/01/Screen_Shot_2017-06-01_at_2.12.49_AM.png">
+              <div class="text">
+                <h2 class="title">When should you go to the gym?</h2>
+                <p class="body-text">Want to avoid people when you workout? Check out this interactive to find your favorite Northwestern gym's quietest hours.</p>
+              </div>
+            </a>
+          </div>
+        
+          
+          <div class="filter-exp grid-item">
+          
+            <a href="http://www.northbynorthwestern.com/story/in-photos-dillo-day-2017/" target="_blank">
+              <img src="http://media.northbynorthwestern.com.s3.amazonaws.com/uploads/2017/06/01/dram1m.jpg">
+              <div class="text">
+                <h2 class="title">Diillo Day 2017</h2>
+                <p class="body-text">Dillo Day is a Northwestern tradition – check out all of the best moments with photos from each mainstage set.</p>
+              </div>
+            </a>
+          </div>
+        
+          
+          <div class="filter-exp grid-item clearfix">
+          
+            <a href="http://www.northbynorthwestern.com/story/campus-running-routes-to-escape-your-problems/" target="_blank">
+              <img src="http://media.northbynorthwestern.com.s3.amazonaws.com/uploads/2017/06/01/running1.png">
+              <div class="text">
+                <h2 class="title">Campus running routes to escape your problems</h2>
+                <p class="body-text">We all know school can make you want to run away sometimes, so why not literally do that with NBN's guide to campus running routes?</p>
+              </div>
+            </a>
+          </div>
+        
+          
+          <div class="filter-exp grid-item">
+          
+            <a href="http://www.northbynorthwestern.com/dm/2017/" target="_blank">
+              <img src="http://media.northbynorthwestern.com.s3.amazonaws.com/uploads/2017/06/01/IMG_1938.jpg">
+              <div class="text">
+                <h2 class="title">Dance Marathon 2017</h2>
+                <p class="body-text">Dance Marathon is one of the biggest events at Northwestern each year. Look at these videos, polls and photos to see what it's like.</p>
+              </div>
+            </a>
+          </div>
+        
+          
+          <div class="filter-exp grid-item clearfix">
+          
+            <a href="http://www.northbynorthwestern.com/story/a-comprehensive-guide-to-evanston-eateries/" target="_blank">
+              <img src="http://media.northbynorthwestern.com.s3.amazonaws.com/uploads/2015/_graphics/housing/articles/restguide.jpg">
+              <div class="text">
+                <h2 class="title">Evanston Restaurant Guide</h2>
+                <p class="body-text">Find the best place to take your parents, your go-to drunchies spot and more with our handy restaurant guide.</p>
+              </div>
+            </a>
+          </div>
+        
+      </div>
+    </div>
+
+
+    
+
+    <div class="grid padded background-purple clear">
+      <div class="grid__item one-whole lap-and-up-one-quarter">
+      <p class="credit"><em>Reporting by&nbsp;</em>&nbsp;Rachel Oh, Justin Curto, Trevor Lystad, Meg Pisarczyk, Robert Bell, Claire Toomey, Alena Prcela, Mia Zanzucchi, Victoria Alfred-Levow, Kate Salvidio, Elly Rivera, Rachel Epstein, Jakob Lazzaro, Yoonjie Park, David Gleisner</p>
+      </div><!--
+     --><div class="grid__item one-whole lap-and-up-one-quarter">
+        <p class="credit"><em>Photos by&nbsp;</em>&nbsp;Rachel Oh, Justin Curto, Emma Kumer, Meg Pisarczyk, Virginia Nowakowski, Claire Toomey, Alena Prcela, Victoria Alfred-Levow, Kate Salvidio, Mia Zanzucchi, Elly Rivera, Rachel Epstein, Jakob Lazzaro, Brian Quistberg, Yoonjie Park, David Gleisner</p>
+      </div><!--
+     --><div class="grid__item one-whole lap-and-up-one-quarter">
+        <p class="credit"><em>Videos by&nbsp;</em>&nbsp;Mia Zanzucchi, Emma Kumer, Meg Pisarczyk, Virginia Nowakowski, Helen Lee, David Gordon, Jesus Campos, Helen Lee, Elissa Gray, Gabrielle Bienasz, Andy Brown, Elizabeth Guthrie, David Gleisner, Poppy Shen</p>
+      </div><!--
+     --><div class="grid__item one-whole lap-and-up-one-quarter">
+         <p class="credit"><em>Editing by&nbsp;</em>&nbsp;Libby Berry, Lila Reynolds, Maxine Whitely, Helen Lee, Virginia Nowakowski, Mia Zanzucchi, Jesus Campos, Isabella Jiao and Rachel Frazin</p>
+        <p class="credit"><em>Design and development by&nbsp;</em>&nbsp;Alex Duner, Tyler Fisher, Hilary Fung, Dan Hill, KK Rebecca Lai, Maxine Whitely, Sheng Wu and Katie Zhu</p>
+        <p class="credit">This project is open source. <a href="https://github.com/northbynorthwestern/2017-housing-guide" style="color: white; text-decoration: underline;">Check it out on GitHub.</a></p>
+        <p class="credit">Data provided by Northwestern University Residential Services</p>
+      </div>`
+    </div>
+
+
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    <script type="text/javascript" src="js/app-footer.min.js?1496352814"></script>
+
+    
+    <script src="js/home.js"></script>
+
+
+  <script>
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+    ga('create', 'UA-15143352-1', 'auto');
+    ga('send', 'pageview');
+
+  </script>
+
+</body>
+</html>

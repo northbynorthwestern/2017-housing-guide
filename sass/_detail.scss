@@ -43,9 +43,9 @@
 	background: $dark-purple;
 }
 #video-tab {
-	background: $light-purple;
-	margin-left: 12px;
+	background: $dark-purple;
 }
+
 #media-container {
 	background: $dark-purple;
 	padding: 2.8%;
@@ -57,7 +57,7 @@
 	}
 }
 #embed-container {
-	display: none;
+	display: block;
 	position: relative;
 	padding-bottom: 56.25%;
 	height: 0;
