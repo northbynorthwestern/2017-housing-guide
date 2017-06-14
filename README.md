@@ -29,7 +29,13 @@ housing2
 What is this?
 -------------
 
-**Describe housing2 here.**
+
+Lots has changed in the past few years since NBN started using this doc. Here is the general process for making the 2017 housing guide and suggestions for improvements/rebuilding efforts next year.
+
+Just cloning the previous year's guide and reading through the documentation below should get you most of the way there. There were a few issues that caught us up for an extended amount of time. Here's what to do if you run into the same issue again. 
+
+TALK ABOUT: data issues, static files, creating an assets folder, the 2015 slug, requirements.txt
+
 
 Assumptions
 -----------
